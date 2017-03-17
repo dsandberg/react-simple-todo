@@ -1,0 +1,51 @@
+// Variables
+$font: 'Roboto', sans-serif;
+$text: RGBA(89, 92, 108, 1.00);
+$text-check: RGBA(89, 92, 108, 0.5);
+$bg: RGBA(240, 239, 234, 1.00);
+$contrast: RGBA(80, 227, 164, 1.00);
+$remove: RGBA(255, 87, 34, 1.00);
+// --
+
+/*----- SASS Loder -----*/
+@import './components/input';
+@import './components/todo_list';
+@import './components/todo_list_item';
+@import './components/date_header';
+@import './components/remove_btn';
+@import './components/effects';
+
+
+
+// Main app style
+* {
+    font-family: $font;
+    color: $text;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html, body, #app {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $bg;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    // max-height: 550px;
+    margin-top: 5%;
+    padding: 35px 35px 0 35px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1)
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        width: 100%;
+        margin-top: 0;
+    }
+}

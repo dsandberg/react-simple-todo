@@ -1,0 +1,44 @@
+
+.todo_list_item {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    min-height: 2.5em;
+    margin: 0;
+    padding: 0.5rem 0;
+    transition: all 0.2s ease-in-out;
+
+    span {
+        font-weight: 300;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        &:hover {
+            cursor: text;
+        }
+    }
+
+    i {
+        color: $text-check;
+        transition: all 0.2s ease-in-out;
+        &::after {
+            content: "check_box_outline_blank";
+            -webkit-font-feature-settings: 'check_box_outline_blank';
+        }
+    }
+}
+
+.todo_list_item.checked {
+    span {
+        color: $text-check;
+    }
+    i {
+        color: $contrast;
+        &::after {
+            content: "check_box";
+            -webkit-font-feature-settings: 'check_box';
+        }
+    }
+}

@@ -1,0 +1,12 @@
+
+.todo_list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 0;
+    max-height: 350px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+    }
+}
